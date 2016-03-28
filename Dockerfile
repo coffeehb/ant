@@ -1,5 +1,5 @@
 # docker file for ant
-FROM daocloud.io/ubuntu:14.04
+FROM ubuntu:14.04
 MAINTAINER JimmyZhou <i@zmy.im>
 
 RUN mkdir -p /app
