@@ -100,7 +100,7 @@ docker run --name some-mongo -d -v /my/own/datadir:/data/db mongo mongod --auth
 这部分反倒简单了, 只需要一条命令, 其中的参数稍后解释
 
 ```bash
-docker run --link some-mongo:mongo \
+docker run --link some-mongo:mongodb \
            -p 80:3000 \
            -e MONGODB_USERNAME=user \
            -e MONGODB_PASSWORD=pwd \
@@ -114,7 +114,7 @@ docker run --link some-mongo:mongo \
            jimmyzhou/ant
 ```
 
---link some-mongo:mongo  把数据库容器和这个容器链接
+--link some-mongo:mongodb  把数据库容器和这个容器链接
 -p 80:3000 将容器的3000端口映射到主机的80端口
 -e 开头的都是环境变量, 具体作用如下
 
